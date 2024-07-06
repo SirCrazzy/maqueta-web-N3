@@ -1,0 +1,28 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <h2>Nuestros Servicios</h2>
+        <hr>
+        <p>En InnovateNow, ofrecemos una amplia gama de servicios diseñados para satisfacer las necesidades de nuestros clientes. Nuestros servicios incluyen:</p>
+        <ul>
+            <li><strong>Desarrollo de Software Personalizado:</strong> Creamos soluciones de software a medida que se adaptan a los requisitos específicos de su negocio.</li>
+            <li><strong>Consultoría Tecnológica:</strong> Proporcionamos asesoramiento experto para optimizar sus procesos y mejorar su infraestructura tecnológica.</li>
+            <li><strong>Desarrollo Web y Móvil:</strong> Diseñamos y desarrollamos aplicaciones web y móviles que mejoran la experiencia del usuario y aumentan la eficiencia.</li>
+            <li><strong>Transformación Digital:</strong> Ayudamos a las empresas a adoptar las últimas tecnologías y a digitalizar sus operaciones para mantenerse competitivas en el mercado actual.</li>
+            <li><strong>Marketing Digital:</strong> Implementamos estrategias de marketing digital que aumentan la visibilidad de su marca y atraen a más clientes.</li>
+        </ul>
+        <ul>
+            {% for service in services_list %}
+            <li>
+                <h3>{{ service.title }}</h3>
+                <p>{{ service.description }}</p>
+            </li>
+            {% empty %}
+            
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

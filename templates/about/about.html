@@ -1,0 +1,19 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <h1>Quiénes Somos</h1>
+        <hr>
+        <p>InnovateNow es una empresa dedicada a transformar ideas en soluciones innovadoras. 
+        Nuestro equipo de expertos en tecnología y creatividad trabaja de la mano con nuestros clientes para desarrollar productos y servicios 
+        que impulsan el crecimiento y la eficiencia. Con una sólida experiencia en el sector, nos esforzamos por estar a la vanguardia de la innovación, 
+        ofreciendo siempre soluciones de calidad y personalizadas. Nuestra misión es ayudar a las empresas a alcanzar su máximo potencial mediante el uso de tecnología de punta 
+        y estrategias innovadoras.</p>
+        {% for info in about_info %}
+            <h2>{{ info.title }}</h2>
+            <p>{{ info.description }}</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
